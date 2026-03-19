@@ -1,10 +1,10 @@
 from flask import Flask
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route("/")
+@app.route("/")
 def home():
-    return "Hola Elastic Beanstalk"
+    return "<h1>¡Introduccion a Docker con AWS - Talento Tech Caribe!</h1>"
 
 if __name__ == "__main__":
-    application.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
